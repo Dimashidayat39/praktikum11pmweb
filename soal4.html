@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    input {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Kalkulator</h1>
+
+  <label for="number1">Bilangan 1:</label>
+  <input type="number" id="number1" onChange="calculateSum()">
+  <br>
+
+  <label for="number2">Bilangan 2:</label>
+  <input type="number" id="number2" onChange="calculateSum()">
+  <br>
+
+  <label for="result">Hasil Penjumlahan:</label>
+  <input type="text" id="result" readonly>
+
+  <script>
+    function calculateSum() {
+      // Ambil nilai dari kedua input
+      let number1 = parseFloat(document.getElementById('number1').value) || 0;
+      var number2 = parseFloat(document.getElementById('number2').value) || 0;
+
+      // Hitung jumlahnya
+      let sum = number1 + number2;
+
+      // Tampilkan hasil pada input dengan id 'result'
+      document.getElementById('result').value = sum;
+    }
+  </script>
+
+</body>
+</html>
